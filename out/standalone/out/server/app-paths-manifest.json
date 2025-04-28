@@ -1,0 +1,14 @@
+{
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/shopify/refund/route": "app/api/shopify/refund/route.js",
+  "/api/shopify/variants/route": "app/api/shopify/variants/route.js",
+  "/api/shopify/orders/route": "app/api/shopify/orders/route.js",
+  "/api/shopify/exchange/route": "app/api/shopify/exchange/route.js",
+  "/order/page": "app/order/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/refund/page": "app/refund/page.js",
+  "/summary/page": "app/summary/page.js",
+  "/exchange/page": "app/exchange/page.js"
+}
