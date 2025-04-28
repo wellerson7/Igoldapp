@@ -1,7 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Card, CardContent } from '../../components/ui/card';
@@ -35,7 +35,6 @@ interface OrderDetail {
 export function ExchangeContent() {
   const { data: session } = useSession();
   const params = useSearchParams();
-  const router = useRouter();
   const orderName = params.get('orderName')?.replace('#', '') || '';
 
   const [step, setStep] = useState(1);
