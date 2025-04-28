@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { ExchangeContent } from './ExchangeContent';
+import { ExchangeContent } from './ExchangeContent';  // Certifique-se do caminho correto
 
 export default function ExchangePage() {
   return (

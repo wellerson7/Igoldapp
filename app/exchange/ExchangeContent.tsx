@@ -3,7 +3,7 @@
 import { useSession } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { Card, CardContent } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
 import Fuse from 'fuse.js';
@@ -32,7 +32,7 @@ interface OrderDetail {
   line_items: LineItem[];
 }
 
-export function ExchangeContent() {
+function ExchangeContentInner() {
   const { data: session } = useSession();
   const params = useSearchParams();
   const orderName = params.get('orderName')?.replace('#', '') || '';
@@ -119,5 +119,13 @@ export function ExchangeContent() {
         </div>
       )}
     </>
+  );
+}
+
+export function ExchangeContent() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <ExchangeContentInner />
+    </Suspense>
   );
 }
