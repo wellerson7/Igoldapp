@@ -55,16 +55,16 @@ export function OrderContent() {
   const totalDiscount = parseFloat(order?.total_discounts || '0').toFixed(2);
   const totalTax = parseFloat(order?.current_total_tax || '0').toFixed(2);
 
-  const handleRefund = (itemId: number) => {
+  const handleRefund = () => {
     // Lógica para processar o reembolso
-    console.log(`Refund solicitado para o item ${itemId}`);
-    toast.success(`Reembolso iniciado para o item ${itemId}`);
+    console.log(`Refund solicitado para o pedido ${name}`);
+    toast.success(`Reembolso iniciado para o pedido ${name}`);
   };
 
-  const handleExchange = (itemId: number) => {
+  const handleExchange = () => {
     // Lógica para processar a troca
-    console.log(`Exchange solicitado para o item ${itemId}`);
-    toast.success(`Troca iniciada para o item ${itemId}`);
+    console.log(`Exchange solicitado para o pedido ${name}`);
+    toast.success(`Troca iniciada para o pedido ${name}`);
   };
 
   if (loading) return <p className="text-center">Carregando…</p>;
@@ -102,21 +102,13 @@ export function OrderContent() {
                   <p className="text-sm text-gray-600">Variante: {item.variant_title}</p>
                   <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                   <p className="font-medium">${item.price}</p>
-                  {/* Botões de Refund e Exchange, alinhados à direita */}
-                  <div className="flex gap-4 mt-4 justify-end">
-                    <Button onClick={() => handleRefund(item.id)} className="bg-black text-white">
-                      Refund
-                    </Button>
-                    <Button onClick={() => handleExchange(item.id)} className="bg-black text-white">
-                      Exchange
-                    </Button>
-                  </div>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
+        {/* Coluna direita - com informações e botões de Refund/Exchange */}
         <div className="space-y-4">
           <Card>
             <CardContent className="flex justify-between">
@@ -147,6 +139,16 @@ export function OrderContent() {
               )}
             </CardContent>
           </Card>
+
+          {/* Botões Refund e Exchange abaixo das informações financeiras */}
+          <div className="flex gap-4 justify-end">
+            <Button onClick={handleRefund} className="bg-black text-white w-full">
+              Solicitar Reembolso
+            </Button>
+            <Button onClick={handleExchange} className="bg-black text-white w-full">
+              Solicitar Troca
+            </Button>
+          </div>
         </div>
       </div>
     </main>
