@@ -22,7 +22,7 @@ export async function GET(_req: NextRequest) {
         headers: {
           'Content-Type': 'application/json',
           'X-Shopify-Access-Token': TOKEN,
-        }
+        },
       });
 
       if (!res.ok) {
@@ -54,9 +54,9 @@ export async function GET(_req: NextRequest) {
 
     return NextResponse.json(allVariants); // Retorna todos os produtos
   } catch (err: any) {
-    console.error('api/shopify/variants error:', err);
+    console.error('Erro ao buscar variantes:', err);
     return NextResponse.json(
-      { error: err.message || 'Erro interno' },
+      { error: err.message || 'Erro interno ao buscar variantes' },
       { status: 500 }
     );
   }

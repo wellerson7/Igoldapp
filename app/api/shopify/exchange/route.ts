@@ -9,15 +9,9 @@ const HEADERS = {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const {
-      orderId,
-      returnItems,
-      addItems,
-      reason,
-      seller,
-      paymentMethod,
-    } = body;
+    const { orderId, returnItems, addItems, reason, seller, paymentMethod } = body;
 
+    // Verificação de dados incompletos
     if (
       !orderId ||
       !returnItems?.length ||
@@ -139,7 +133,7 @@ export async function POST(req: NextRequest) {
   } catch (err: any) {
     console.error('Erro ao processar troca:', err);
     return NextResponse.json(
-      { error: err.message || 'Erro inesperado.' },
+      { error: err.message || 'Erro inesperado ao processar a troca' },
       { status: 500 }
     );
   }
