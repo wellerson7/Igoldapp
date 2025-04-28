@@ -57,13 +57,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-white">
       <div className="w-80 p-8 bg-white rounded-xl">
-        <div className="flex justify-center mb-12">
-          <img
-            src="/logo.png"  // Certifique-se de que o logo está na pasta 'public/'
-            alt="Logo"
-            className="h-24 w-auto sm:h-32 md:h-40 lg:h-48"  // Ajuste de tamanho com base no tamanho da tela
-          />
-        </div>
+        {/* A imagem foi removida */}
 
         {renderDots()}
 
@@ -99,11 +93,7 @@ export default function LoginPage() {
         <button
           onClick={handleSubmit}
           disabled={code.length !== 4}
-          className={`w-full py-4 text-white text-lg font-medium rounded-lg transition ${
-            code.length === 4
-              ? 'bg-black'
-              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-          }`}
+          className={`w-full py-4 text-white text-lg font-medium rounded-lg transition ${code.length === 4 ? 'bg-black' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
         >
           Entrar
         </button>
@@ -111,3 +101,4 @@ export default function LoginPage() {
     </main>
   );
 }
+
