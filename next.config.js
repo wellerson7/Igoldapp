@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cdn.shopify.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
+      },
+    ],
   },
-  output: 'standalone',  // Usando standalone para que o build seja feito corretamente para as rotas dinâmicas
-  distDir: 'out',    // Diretório de saída para exportação estática de páginas
-  experimental: {
-    appDir: true,  // Habilita o App Router (se estiver usando Next.js 13+ com o App Router)
-  },
+  output: 'standalone', // Para permitir exportação estática e gerar um build independente
+  distDir: 'out', // Diretório de saída para exportação estática (gerando os arquivos na pasta 'out/')
+  // Removido 'appDir' já que não é mais necessário
 };
 
 module.exports = nextConfig;

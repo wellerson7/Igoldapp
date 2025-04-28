@@ -1,106 +1,25 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/_not-found/page-cd0d97fd779a8446.js"
-    ],
     "/api/auth/[...nextauth]/route": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/api/auth/[...nextauth]/route-d05b13446679566f.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/auth/[...nextauth]/route.js"
     ],
     "/layout": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/css/41bda24bf73e2c70.css",
-      "static/chunks/776-194d2f20fc21f488.js",
-      "static/chunks/app/layout-0b90228df512e953.js"
-    ],
-    "/api/shopify/refund/route": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/api/shopify/refund/route-eb756fb0445410f9.js"
-    ],
-    "/api/shopify/variants/route": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/api/shopify/variants/route-cc035fc90f317603.js"
-    ],
-    "/api/shopify/orders/route": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/api/shopify/orders/route-aeb76479c4063a48.js"
-    ],
-    "/api/shopify/exchange/route": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/api/shopify/exchange/route-eee57edc07c02687.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/order/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/394-235deb7936d83db0.js",
-      "static/chunks/971-30d4cf6c8c7611d9.js",
-      "static/chunks/app/order/page-82c05467835b613b.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/order/page.js"
     ],
-    "/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/776-194d2f20fc21f488.js",
-      "static/chunks/app/page-0d4f0f98bd807d28.js"
-    ],
-    "/login/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/776-194d2f20fc21f488.js",
-      "static/chunks/app/login/page-ff79c491f20e1ede.js"
-    ],
-    "/refund/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/776-194d2f20fc21f488.js",
-      "static/chunks/394-235deb7936d83db0.js",
-      "static/chunks/app/refund/page-16f272c622525234.js"
-    ],
-    "/summary/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/app/summary/page-2ba4406b38505b95.js"
-    ],
-    "/exchange/page": [
-      "static/chunks/webpack-5349bdd5a8908b52.js",
-      "static/chunks/c7879cf7-100e237f53016970.js",
-      "static/chunks/870-224a5f000c275404.js",
-      "static/chunks/main-app-d1a2c1c4c75acab4.js",
-      "static/chunks/776-194d2f20fc21f488.js",
-      "static/chunks/394-235deb7936d83db0.js",
-      "static/chunks/971-30d4cf6c8c7611d9.js",
-      "static/chunks/app/exchange/page-cd96c44c4ba83b01.js"
+    "/api/shopify/orders/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/shopify/orders/route.js"
     ]
   }
 }
