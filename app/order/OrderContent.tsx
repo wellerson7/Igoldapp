@@ -55,6 +55,18 @@ export function OrderContent() {
   const totalDiscount = parseFloat(order?.total_discounts || '0').toFixed(2);
   const totalTax = parseFloat(order?.current_total_tax || '0').toFixed(2);
 
+  const handleRefund = (itemId: number) => {
+    // Lógica para processar o reembolso
+    console.log(`Refund solicitado para o item ${itemId}`);
+    toast.success(`Reembolso iniciado para o item ${itemId}`);
+  };
+
+  const handleExchange = (itemId: number) => {
+    // Lógica para processar a troca
+    console.log(`Exchange solicitado para o item ${itemId}`);
+    toast.success(`Troca iniciada para o item ${itemId}`);
+  };
+
   if (loading) return <p className="text-center">Carregando…</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
   if (!order) return <p className="text-center">Nenhum pedido encontrado.</p>;
@@ -87,11 +99,18 @@ export function OrderContent() {
                 </div>
                 <div className="flex-1 space-y-1">
                   <p className="font-semibold">{item.name}</p>
-                  <p className="text-sm text-gray-600">
-                    Variante: {item.variant_title}
-                  </p>
+                  <p className="text-sm text-gray-600">Variante: {item.variant_title}</p>
                   <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                   <p className="font-medium">${item.price}</p>
+                  {/* Botões de Refund e Exchange */}
+                  <div className="flex gap-4 mt-2">
+                    <Button onClick={() => handleRefund(item.id)} className="bg-red-500 text-white">
+                      Refund
+                    </Button>
+                    <Button onClick={() => handleExchange(item.id)} className="bg-blue-500 text-white">
+                      Exchange
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
