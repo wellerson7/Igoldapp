@@ -1,19 +1,14 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
+import SummaryContent from './SummaryContent';
 
 export default function SummaryPage() {
-  const searchParams = useSearchParams();
-  const orderId = searchParams.get('orderId');
-
   return (
-    <div className="p-6 max-w-xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Summary Page</h1>
-      {orderId ? (
-        <p>Showing summary for Order ID: <strong>{orderId}</strong></p>
-      ) : (
-        <p>No order ID provided.</p>
-      )}
-    </div>
+    <main>
+      <Suspense fallback={<div>Loading summary...</div>}>
+        <SummaryContent />
+      </Suspense>
+    </main>
   );
 }
