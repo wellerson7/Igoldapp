@@ -102,12 +102,12 @@ export function OrderContent() {
                   <p className="text-sm text-gray-600">Variante: {item.variant_title}</p>
                   <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                   <p className="font-medium">${item.price}</p>
-                  {/* Botões de Refund e Exchange */}
-                  <div className="flex gap-4 mt-2">
-                    <Button onClick={() => handleRefund(item.id)} className="bg-red-500 text-white">
+                  {/* Botões de Refund e Exchange, alinhados à direita */}
+                  <div className="flex gap-4 mt-4 justify-end">
+                    <Button onClick={() => handleRefund(item.id)} className="bg-black text-white">
                       Refund
                     </Button>
-                    <Button onClick={() => handleExchange(item.id)} className="bg-blue-500 text-white">
+                    <Button onClick={() => handleExchange(item.id)} className="bg-black text-white">
                       Exchange
                     </Button>
                   </div>
