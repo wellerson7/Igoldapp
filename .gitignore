@@ -1,0 +1,9 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar build do Next.js
+.next/
+
+# Ignorar variáveis locais
+.env.local
+.env
