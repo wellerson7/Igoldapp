@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -19,16 +15,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./app/*"
-      ]
+      "@/*": ["./*"]
     },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    // assegura que ele procure declarações também na pasta types
     "typeRoots": [
       "./types",
       "./node_modules/@types"
@@ -38,7 +31,6 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    // agora inclui tudo de types/
     "types/**/*.d.ts",
     "**/*.ts",
     "**/*.tsx"
