@@ -1,5 +1,3 @@
-
-// app/login/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -50,11 +48,7 @@ export default function LoginPage() {
       {Array.from({ length: 4 }).map((_, i) => (
         <div
           key={i}
-          className={
-            i < code.length
-              ? 'w-5 h-5 rounded-full bg-black'
-              : 'w-5 h-5 rounded-full border-2 border-gray-300'
-          }
+          className={i < code.length ? 'w-5 h-5 rounded-full bg-black' : 'w-5 h-5 rounded-full border-2 border-gray-300'}
         />
       ))}
     </div>
@@ -65,9 +59,9 @@ export default function LoginPage() {
       <div className="w-80 p-8 bg-white rounded-xl">
         <div className="flex justify-center mb-12">
           <img
-            src="/logo.png"
+            src="/logo.png"  // Certifique-se de que o logo está na pasta 'public/'
             alt="Logo"
-            className="h-24 w-auto"
+            className="h-24 w-auto sm:h-32 md:h-40 lg:h-48"  // Ajuste de tamanho com base no tamanho da tela
           />
         </div>
 
@@ -78,7 +72,7 @@ export default function LoginPage() {
         )}
 
         <div className="grid grid-cols-3 gap-4 mb-8">
-          {['1','2','3','4','5','6','7','8','9'].map(d => (
+          {['1', '2', '3', '4', '5', '6', '7', '8', '9'].map(d => (
             <button
               key={d}
               onClick={() => handleDigit(d)}
